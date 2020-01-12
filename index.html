@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <title>Home - Spacenology</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<h1>SPACENOLOGY</h1>
+
+<div class="topnav" id="myTopnav">
+        <a class="active" href="/spacenology/index.html"><strong>Home</strong></a>
+        <a href="/spacenology/news.html">News</a>
+        <a href="/spacenology/astronauts.html">Astronauts</a>
+        <a href="/spacenology/contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+<div class="container">
+    <div class="col1">
+       <h2>Picture of the day</h2>
+       <script> fetch('https://api.nasa.gov/planetary/apod?api_key=fGVoWj387Kqq5cOSPh1nHdRPDWRhMefq7XHDc4T9')
+            .then(result => result.json())
+            .then((res) => {
+              console.log(res);
+            })</script>
+    </div>
+</div>
+<img src="media/image2.jpg" alt="space" class="responsive">
+<div class="container">
+    <div class="col1">
+            <p>People in space:</p>
+            <script src="data"></script>
+    </div>
+    <div class="col2"> 
+            <img src="media/image2.jpg" alt="space" class="responsive">
+    </div>
+    <div class="col3">
+            <img src="media/image2.jpg" alt="space" class="responsive">
+    </div>
+</div>
+
+<div class="container">
+    <div class="col1">
+        <h2>Weather report from Mars</h2>
+            <iframe src='https://mars.nasa.gov/layout/embed/image/insightweather/' width='800' height='530'  scrolling='no' frameborder='0' class="responsive">
+            </iframe>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col1"></div>
+    <div class="col2"></div>
+    <div class="col3"></div>
+</div>
+</html>
+
+<script src="https://api.nasa.gov/planetary/apod?api_key=fGVoWj387Kqq5cOSPh1nHdRPDWRhMefq7XHDc4T9"></script>
